@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Объявление типа документа HTML5. Это помогает браузеру правильно интерпретировать и отображать страницу. -->
+<html lang="en">
+<!-- Открывающий тег <html>, указывающий на начало HTML-документа. Атрибут 'lang' задает основной язык документа как английский. -->
+<head>
+    <!-- Секция <head> содержит метаданные, необходимые для документа, которые не отображаются напрямую на веб-странице. -->
+    <meta charset="UTF-8">
+    <!-- Элемент <meta> с атрибутом charset="UTF-8", который указывает на использование кодировки UTF-8, поддерживающей большое количество символов и языков. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Мета-тег для контроля масштабирования и размеров вьюпорта на мобильных устройствах. Он гарантирует, что сайт будет правильно отображаться на разных устройствах. -->
+    <title>Portfolio</title>
+    <!-- Заголовок страницы, который отображается в заголовке вкладки браузера. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение внешней библиотеки Tailwind CSS через CDN для стилизации элементов страницы. -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
+    <!-- Подключение скрипта для генерации QR-кодов, используемого на веб-странице. -->
+    <script src="index.js"></script>
+    <!-- Подключение внешнего JavaScript файла, который содержит скрипты для интерактивности на странице. -->
+    <link href="assets/styles/styles.css" rel="stylesheet">
+    <!-- Ссылка на внешний CSS файл, который содержит стили для стилизации веб-страницы. -->
+</head>
+<body>
+<!-- Тело документа, содержащее все содержимое, видимое пользователю. -->
+
+<!-- Header (Заголовок страницы) -->
+<header class="text-gray-600 body-font">
+    <!-- Блок <header> означает вводную часть или навигационную секцию веб-страницы. Классы Tailwind CSS используются для стилизации. -->
+    <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center justify-between">
+        <!-- Контейнер для содержимого шапки с адаптивной раскладкой, использующей flexbox. -->
+        <nav class="flex lg:w-2/3 flex-wrap items-center text-base m-2.5">
+            <!-- Навигационное меню, стилизованное с помощью flexbox для адаптивного отображения элементов. -->
+            <a href="#about" class="mr-5 hover:text-gray-900 cursor-pointer">ОБО МНЕ</a>
+            <!-- Ссылка, ведущая к секции "Обо мне". Стиль :hover изменяет цвет текста при наведении. -->
+            <a href="#projects" class="mr-5 hover:text-gray-900 cursor-pointer">ПРОЕКТЫ</a>
+            <!-- Ссылка, ведущая к секции "Проекты". -->
+            <a href="#contacts" class="hover:text-gray-900 cursor-pointer">КОНТАКТЫ</a>
+            <!-- Ссылка, ведущая к секции "Контакты". -->
+        </nav>
+        <a href="#" class="flex order-first lg:order-none title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
+            <!-- Логотип и ссылка на главную страницу или домашнюю секцию. Используется flexbox для расположения элементов. -->
+            <img class="w-48 my-3 object-cover object-center rounded cursor-pointer" alt="logo" src="assets/img/icons/rus-black04.gif">
+            <!-- Изображение логотипа с адаптивными размерами и стилями для различных устройств. -->
+        </a>
+    </div>
+</header>
+
+<!-- Main Banner (Главный баннер) -->
+<section class="text-gray-600 body-font">
+    <!-- Секция для главного баннера, использующая классы Tailwind для стилизации текста и фона. -->
+    <div class="container mx-auto flex px-5 py-4 items-center justify-center flex-col">
+        <!-- Контейнер для содержимого баннера с вертикальной компоновкой. -->
+        <video class="lg:w-2/3 md:w-1/2 w-5/6 mb-10 object-cover object-center rounded-xl" autoplay muted loop>
+            <!-- Видео, которое автоматически проигрывается, без звука и зациклено. -->
+            <source src="assets/video/1.mp4" type="video/mp4">
+            <!-- Источник видеофайла, укажите путь к вашему видео здесь. -->
+            Ваш браузер не поддерживает элемент video.
+            <!-- Сообщение для пользователей, чьи браузеры не поддерживают элемент video. -->
+        </video>
+        <div class="text-center lg:w-2/3 w-full">
+            <!-- Блок с заголовком, центрированный и адаптированный к размеру экрана. -->
+            <h1 class="title-font sm:text-6xl text-5xl mb-4 font-medium text-gray-900">Я У МАМЫ ДИЗАЙНЕР</h1>
+            <!-- Заголовок баннера с различными размерами шрифта для разных устройств. -->
+        </div>
+    </div>
+</section>
+
+
+<!-- Main Content Area (Основная контентная область) -->
+<section id="about" class="text-gray-600 body-font">
+    <!-- Секция "Обо мне" с классами Tailwind для стилизации текста и фона. -->
+    <div class="container px-5 py-24 mx-auto">
+        <!-- Контейнер с большим внутренним отступом, обеспечивающим пространство вокруг содержимого. -->
+        <div class="flex flex-wrap -m-4">
+            <!-- Группа блоков с маргином для создания пространства между элементами. -->
+            <div class="p-4 md:w-1/2 w-full">
+                <!-- Блок с адаптивной шириной, занимающий половину ширины на экранах среднего и большого размера. -->
+                <div class="bg-gray-200 p-8 rounded-xl h-full">
+                    <!-- Внутренний блок с фоном, отступами и закругленными углами. -->
+                    <h1 class="title-font text-3xl font-medium text-gray-900 mb-3">ЧУТОК ОБО МНЕ</h1>
+                    <!-- Заголовок секции, средний размер шрифта. -->
+                    <p class="text-gray-800 text-2xl leading-relaxed text-justify my-5 font-sans">
+                        <!-- Параграф с описанием. -->
+                        Всем привет! Меня зовут Леся. 
+                    Сфера моей деятельности это дизайн и творчество. Рисую и играю на гитаре. 
+                    Считаю направление AR актуально в современном мире , в том числе и в сфере дизайна. Пошла в эту студию так как это разностороннее и перспективное направление.
+                    </p>
+                </div>
+            </div>
+            <div class="p-4 md:w-1/2 w-full">
+                <!-- Второй блок с адаптивной шириной. -->
+                <div class="h-full bg-gray-200 p-8 rounded-xl">
+                    <!-- Внутренний блок с фоном, отступами и закругленными углами. -->
+                    <div id="photoCarousel" class="carousel h-full bg-gray-200 p-4 rounded-xl photo-carousel relative">
+                        <!-- Заголовок карусели. -->
+                        <img class="rounded-xl carousel-image block object-cover object-center" src="assets/img/photo/Олесяmain.jpg" alt="personal">
+                        <!-- Первое изображение в карусели, отображаемое по умолчанию. -->
+                        <img class="rounded-xl carousel-image hidden object-cover object-center" src="assets/img/photo/Олеся1.jpg" alt="Олеся 1">
+                        <!-- Второе изображение, скрытое по умолчанию. -->
+                        <img class="rounded-xl carousel-image hidden object-cover object-center" src="assets/img/photo/Олеся2.jpg" alt="Олеся 2">
+                        <!-- Третье изображение, скрытое по умолчанию. -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="marquee p-4"> <!-- Бегущая строка -->
+    <div class="marquee-content"> <!-- Контент бегущей строки -->
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span> <!-- Текст 1 -->
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span> <!-- Текст 2 -->
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span> <!-- Текст 3 -->
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span> <!-- Текст 4 -->
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span> <!-- Текст 5 -->
+    </div>
+</div>
+<div class="marquee2 p-4">
+    <div class="marquee-content2">
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span>
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span>
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span>
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span>
+        <span> Ш К О Л А К Р Е А Т И В Н Ы Х И Н Д У С Т Р И Й </span>
+    </div>
+</div>
+
+<!-- Projects Showcase (Витрина проектов) -->
+<section id="projects" class="text-gray-600 body-font"> <!-- Секция "Проекты" -->
+    <div class="container px-5 py-24 mx-auto"> <!-- Контейнер -->
+        <h2 class="title-font text-center sm:text-4xl text-3xl mb-4 font-medium text-gray-900">ПРОЕКТЫ</h2> <!-- Заголовок секции -->
+        <div class="flex flex-wrap -m-4"></div> <!-- Плейсхолдер для проектов -->
+    </div>
+</section>
+
+<!-- Footer (Подвал) -->
+<footer id="contacts" class="text-gray-600 body-font"> <!-- Секция подвала -->
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"> <!-- Контейнер -->
+        <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4">© 2024 Олеся Лазарева</p> <!-- Копирайт -->
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"> <!-- Блок социальных ссылок -->
+        <a class="text-gray-500 cursor-pointer"> <!-- Ссылка на Instagram (пустая, без href) -->
+          <img src="assets/img/icons/Inst.svg" alt="Instagram"> <!-- Иконка Instagram -->
+        </a>
+        <a href="https://t.me/Tihiro_mama" class="ml-3 text-gray-500 cursor-pointer"> <!-- Ссылка на Telegram -->
+          <img src="assets/img/icons/TG.svg" alt="Telegram"> <!-- Иконка Telegram -->
+        </a>
+        <a href="https://vk.com/id736372097" class="ml-3 text-gray-500 cursor-pointer"> <!-- Ссылка на VK -->
+          <img src="assets/img/icons/VK.svg" alt="VKontakte"> <!-- Иконка VK -->
+        </a>
+      </span>
+    </div>
+</footer>
+
+</body>
+</html>
